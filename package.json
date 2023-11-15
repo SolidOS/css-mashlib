@@ -4,10 +4,11 @@
   "description": "CSS with mashlib recipe",
   "main": "index.js",
   "scripts": {
-    "start": "npx community-solid-server -c ./config/config-mashlib.json ./config/override-pod-templates.json -f ./data",
+    "start0": "npx community-solid-server -c ./config/config-mashlib.json ./config/override-pod-templates.json -f ./data",
+    "start": "npx community-solid-server -c ./config/https-mashlib-suffix-file.json -f ./data",
     "build": "echo \"Nothing to build.\"",
     "clean": "[ -d ./data ] && rm -rf ./data || true",
-    "start:clean": "npm run clean &&  npm run start",
+    "start:clean": "npm run clean &&  npm run start", 
     "test": "echo \"Error: no test specified\" && exit 1",
     "templates": "cp -r templates/ ./node_modules/@solid/community-server/"
   },
@@ -28,7 +29,7 @@
   },
   "homepage": "https://github.com/solidos/css-mashlib#readme",
   "dependencies": {
-    "@solid/community-server": "^5.1.0",
-    "mashlib": "^1.8.5"
+    "@solid/community-server": "^7.0.1",
+    "mashlib": "^1.8.8"
   }
 }
