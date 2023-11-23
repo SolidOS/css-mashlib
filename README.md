@@ -39,8 +39,8 @@ This is a `http://localhost:3000` server for mashlib test purpose. The repo is i
   - `https-mashlib-subdomain-file.json`
 
   The command line to run these server can be :
-  `npx community-solid-server -c ./config/https-mashlib-suffix-file.json -f ./data --httpsKey ../privkey.pem --httpsCert ../fullchain.pem -b https://server:3000`
+  `npx community-solid-server -c ./config/https-mashlib-suffix-file.json -f ./data --httpsKey ../privkey.pem --httpsCert ../fullchain.pem -b https://yourserver:3000`
 
     - replace certificates by real one
     - replace ./data by real storage
-    - replace `https://server:3000` by
+    - replace `https://yourserver:3000` by the real one (example https://solidcommunity.net:3000)
