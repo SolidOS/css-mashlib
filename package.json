@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start0": "npx community-solid-server -c ./config/config-mashlib.json ./config/override-pod-templates.json -f ./data",
-    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 && npx community-solid-server -c ./config/https-mashlib-suffix-file.json -f ./data --httpsKey ../privkey.pem --httpsCert ../fullchain.pem -b https://localhost:3000",
+    "start1": "NODE_TLS_REJECT_UNAUTHORIZED=0 && npx community-solid-server -c ./config/https-mashlib-suffix-file.json -f ./data --httpsKey ../privkey.pem --httpsCert ../fullchain.pem -b https://localhost:3000",
+    "start": "npx community-solid-server -c ./config/http-mashlib-suffix-file.json -f ./data",
     "build": "echo \"Nothing to build.\"",
     "clean": "[ -d ./data ] && rm -rf ./data || true",
     "start:clean": "npm run clean &&  npm run start",
