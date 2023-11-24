@@ -10,9 +10,9 @@
 <{{webId}}>
     {{#if name}}foaf:name "{{name}}";{{/if}}
     space:storage <../>;
-    ldp:inbox </inbox/>;
-    space:preferencesFile </settings/prefs.ttl>;
-    solid:privateTypeIndex </settings/privateTypeIndex.ttl>;
-    solid:publicTypeIndex </settings/publicTypeIndex.ttl>;
+    ldp:inbox <../inbox/>;
+    space:preferencesFile <../settings/prefs.ttl>;
+    solid:privateTypeIndex <../settings/privateTypeIndex.ttl>;
+    solid:publicTypeIndex <../settings/publicTypeIndex.ttl>;
     {{#if oidcIssuer}}solid:oidcIssuer <{{oidcIssuer}}>;{{/if}}
     a foaf:Person.
