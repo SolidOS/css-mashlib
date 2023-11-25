@@ -1,17 +1,19 @@
-@prefix : <#>.
+# ACL resource for the profile Inbox
+
 @prefix acl: <http://www.w3.org/ns/auth/acl#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
-# Authenticated agent appendable but not public-redable
-:Append
+<#owner>
     a acl:Authorization;
-    acl:accessTo <./>;
-    acl:agentClass acl:AuthenticatedAgent;
-    acl:default <./>;
-    acl:mode acl:Append.
-
-:ControlReadWrite
-    a acl:Authorization;
-    acl:accessTo <./>;
     acl:agent <{{webId}}>;
+    acl:accessTo <./>;
     acl:default <./>;
-    acl:mode acl:Control, acl:Read, acl:Write.
+    acl:mode
+        acl:Read, acl:Write, acl:Control.
+
+# Appendable by authenticated, but NOT public-readable
+<#authenticated>
+    a acl:Authorization;
+    acl:agentClass acl:AuthenticatedAgent;
+    acl:accessTo <./>;
+    acl:mode acl:Append.
