@@ -1,12 +1,14 @@
 @prefix : <#>.
 @prefix acl: <http://www.w3.org/ns/auth/acl#>.
 
+# Authenticated agent appendable but not public-redable
 :Append
     a acl:Authorization;
     acl:accessTo <./>;
     acl:agentClass acl:AuthenticatedAgent;
     acl:default <./>;
     acl:mode acl:Append.
+
 :ControlReadWrite
     a acl:Authorization;
     acl:accessTo <./>;
