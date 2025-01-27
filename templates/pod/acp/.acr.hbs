@@ -32,8 +32,9 @@
     acp:apply [
         a acp:Policy;
         acp:allow acl:Read, acl:Write, acl:Control;
-        acp:anyOf [
+        acp:allOf [
             a acp:Matcher;
             acp:agent <{{webId}}>
+            acp:client <https://solid.pondersource.com/clientid.jsonld>
         ]
     ].
