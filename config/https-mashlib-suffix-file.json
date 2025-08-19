@@ -99,8 +99,18 @@
       "assets": [
         {
           "@type": "StaticAssetEntry",
+          "relativeUrl": "/mashlib.js",
+          "filePath": "./node_modules/mashlib/dist/mashlib.js"
+        },
+        {
+          "@type": "StaticAssetEntry",
           "relativeUrl": "/mash.css",
           "filePath": "./node_modules/mashlib/dist/mash.css"
+        },
+        {
+          "@type": "StaticAssetEntry",
+          "relativeUrl": "/mash.css.map",
+          "filePath": "./node_modules/mashlib/dist/mash.css.map"
         },
         {
           "@type": "StaticAssetEntry",
@@ -113,6 +123,19 @@
           "filePath": "./node_modules/mashlib/dist/mashlib.min.js.map"
         }
       ]
+    },
+    {
+      "comment": "Allow public read access to Mashlib static assets.",
+      "@type": "WebAclAuthorization",
+      "acl:accessTo": [
+        "/mashlib.js",
+        "/mashlib.min.js",
+        "/mashlib.min.js.map",
+        "/mash.css",
+        "/mash.css.map"
+      ],
+      "acl:agentClass": ["foaf:Agent"],
+      "acl:mode": ["acl:Read"]
     }
   ]
 }
